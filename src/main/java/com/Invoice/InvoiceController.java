@@ -1,4 +1,4 @@
-package Invoice;
+package com.Invoice;
 
 import org.springframework.web.bind.annotation.RestController;
 
