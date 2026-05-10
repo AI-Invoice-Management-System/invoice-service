@@ -1,4 +1,4 @@
-package com.example.invoiceservice.Invoice.Request;
+package com.example.invoiceservice.Predict.Request;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -8,14 +8,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "Invoices")
-public class Invoice {
+@Entity
+@Table(name = "Predictions")
+public class PredictionRequest {
     @Id private String invoiceId;
-    private String customerNumber;
-    private String customerName;
-    private String dueInDate;
-    private String totalOpenAmount;
+    private String predictedDate;
 }

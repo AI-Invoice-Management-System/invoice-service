@@ -1,10 +1,10 @@
 package com.example.invoiceservice.Repository;
 
-import com.example.invoiceservice.Invoice.Request.Invoice;
+import com.example.invoiceservice.Predict.Request.PredictionRequest;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface InvoiceRepository extends JpaRepository<Invoice, String> {
+public interface PredictionRepository extends JpaRepository<PredictionRequest, String> {
 
 }
