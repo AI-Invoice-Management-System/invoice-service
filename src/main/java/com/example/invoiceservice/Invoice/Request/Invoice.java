@@ -7,6 +7,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Date;
+import java.time.LocalDate;
+
 @Data
 @Entity
 @NoArgsConstructor
@@ -18,4 +21,5 @@ public class Invoice {
     private String customerName;
     private String dueInDate;
     private String totalOpenAmount;
+    private String date = Date.valueOf(LocalDate.now()).toString();
 }
