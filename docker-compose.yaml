@@ -1,0 +1,44 @@
+services:
+
+  invoice-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: invoice-service
+
+    ports:
+      - "9669:9669"
+
+    environment:
+      SERVER_PORT: 9669
+
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-db:5432/ai_invoice_management
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: 12345678
+
+    depends_on:
+      - postgres-db
+
+    restart: unless-stopped
+
+  postgres-db:
+    image: postgres:16
+
+    container_name: postgres-db
+
+    ports:
+      - "5432:5432"
+
+    environment:
+      POSTGRES_DB: ai_invoice_management
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 12345678
+
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+    restart: unless-stopped
+
+volumes:
+  postgres-data:

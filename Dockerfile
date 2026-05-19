@@ -1,12 +1,10 @@
-# Build stage
-FROM gradle:8.12-jdk21 AS build
+FROM gradle:9.4.1-jdk21 AS build
 WORKDIR /app
 COPY . .
-RUN ./gradlew bootJar --no-daemon
 
-# Run stage
-FROM eclipse-temurin:21-jre-jammy
+RUN ./gradlew clean build --no-daemon
+FROM eclipse-temurin:21-jre
 WORKDIR /app
 COPY --from=build /app/build/libs/*.jar app.jar
-EXPOSE 8080
+EXPOSE 9669
 ENTRYPOINT ["java", "-jar", "app.jar"]
