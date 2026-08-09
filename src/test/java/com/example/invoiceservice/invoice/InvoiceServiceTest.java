@@ -1,7 +1,7 @@
-package com.example.invoiceservice.Invoice;
+package com.example.invoiceservice.invoice;
 
-import com.example.invoiceservice.Invoice.Request.Invoice;
-import com.example.invoiceservice.Repository.InvoiceRepository;
+import com.example.invoiceservice.invoice.request.Invoice;
+import com.example.invoiceservice.repository.InvoiceRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -16,7 +16,6 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.verifyNoInteractions;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)

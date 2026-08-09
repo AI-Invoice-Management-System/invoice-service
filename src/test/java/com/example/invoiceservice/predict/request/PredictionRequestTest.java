@@ -1,4 +1,4 @@
-package com.example.invoiceservice.Predict.Request;
+package com.example.invoiceservice.predict.request;
 
 import org.junit.jupiter.api.Test;
 

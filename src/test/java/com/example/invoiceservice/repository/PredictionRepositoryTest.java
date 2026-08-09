@@ -1,6 +1,6 @@
-package com.example.invoiceservice.Repository;
+package com.example.invoiceservice.repository;
 
-import com.example.invoiceservice.Predict.Request.PredictionRequest;
+import com.example.invoiceservice.predict.request.PredictionRequest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;

@@ -1,6 +1,6 @@
-package com.example.invoiceservice.Repository;
+package com.example.invoiceservice.repository;
 
-import com.example.invoiceservice.Invoice.Request.Invoice;
+import com.example.invoiceservice.invoice.request.Invoice;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,13 +1,14 @@
-package com.example.invoiceservice.Invoice;
+package com.example.invoiceservice.invoice;
 
-import com.example.invoiceservice.Invoice.Request.Invoice;
-import com.example.invoiceservice.Repository.InvoiceRepository;
+import com.example.invoiceservice.invoice.request.Invoice;
+import com.example.invoiceservice.repository.InvoiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Component
 public class InvoiceService {
     @Autowired
     private InvoiceRepository invoiceRepository;

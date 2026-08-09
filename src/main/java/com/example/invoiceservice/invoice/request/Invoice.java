@@ -1,4 +1,4 @@
-package com.example.invoiceservice.Invoice.Request;
+package com.example.invoiceservice.invoice.request;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
