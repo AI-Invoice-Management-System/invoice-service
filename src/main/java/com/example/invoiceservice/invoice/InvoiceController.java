@@ -9,7 +9,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/invoices")
 public class InvoiceController {
-    @Autowired InvoiceService invoiceService;
+    private final InvoiceService invoiceService;
+
+    @Autowired
+    public InvoiceController(InvoiceService invoiceService) {
+        this.invoiceService = invoiceService;
+    }
 
     @PostMapping("/add")
     public String addInvoice(@RequestBody Invoice invoice) {
