@@ -97,5 +97,17 @@ class HttpGetRequestWrapperTest {
         assertFalse(result.isPresent());
     }
 
+    @Test
+    void makeRequest_Exception() {
+        String url = "http://example.com";
+
+        when(restClient.get()).thenThrow(new RuntimeException("Connection error"));
+
+        Optional<TestResponse> result = httpGetRequestWrapper.makeRequest(url, TestResponse.class);
+
+        assertFalse(result.isPresent());
+        verify(restClient).get();
+    }
+
     private record TestResponse(String key) {}
 }
